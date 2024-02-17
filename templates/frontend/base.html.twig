@@ -41,17 +41,7 @@
         <script defer src="{{ asset('assets/frontend/js/bootstrap/bootstrap.min.js') }}"></script>
         <script  src="{{ asset('assets/frontend/js/general.js') }}"></script>
         {# {{ encore_entry_script_tags('app') }} #}
-
-        <script>
-            //MUESTRA LOADING ANTES DE CARGAR LA NUEVA PAGINA
-            $(window).on('beforeunload', function(){
-                loadingPageShow();
-            });
-            //OCULTA LOADING AL TERMINAR DE CARGAR LA PAGINA.
-            document.addEventListener('DOMContentLoaded', function() {
-                loadingPageHidden();
-            });
-        </script>
+        
     {% endblock %}
 </head>
 
