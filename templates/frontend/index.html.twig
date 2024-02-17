@@ -1,0 +1,30 @@
+{% extends 'frontend/base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block stylesheetsAdicional %}
+<link rel="stylesheet" href="{{asset('assets/frontend/css/page/index/index.css')}}">
+{% endblock %}
+
+{% block head %}
+<section>
+    <div class="main-title-logo-container">
+        <img draggable="false" src="{{ asset('assets/general/img/logo/Star_Wars_Logo..png') }}" class=" rotate-center img-home">
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+
+{% block menu %}
+{% include "frontend/_component/menu/_menu.html.twig" %}
+<script defer src="{{ asset('assets/frontend/js/Navbar/mobileNavbar.js') }}"></script>
+{% endblock %}
+
+
+{% block javascript_footer %}
+<script src="{{ asset('assets/frontend/js/three.min.js') }}"></script>
+<script src="{{ asset('assets/frontend/js/background.js') }}"></script>
+{% endblock %}

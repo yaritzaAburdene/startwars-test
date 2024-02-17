@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Title{% endblock %} - TEST</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/general/img/favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/general/img/favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/general/img/favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets/general/img/favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/general/img/favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/general/img/favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/general/img/favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/general/img/favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/general/img/favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('assets/general/img/favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/general/img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/general/img/favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/general/img/favicon/favicon-16x16.png') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Estilos -->
+    {# Run `composer require symfony/webpack-encore-bundle` and uncomment the following Encore helpers to start using
+    Symfony UX #}
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/global.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/bootstrap/bootstrap.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/frontend/css/style.css') }}"/>
+    {% endblock %}
+
+    {% block stylesheetsAdicional %}{% endblock %}
+
+    {% block javascriptsHead %}
+        <script  src="{{ asset('assets/frontend/js/jquery/jquery.min.js') }}"></script>
+        <script defer src="{{ asset('assets/frontend/js/bootstrap/bootstrap.min.js') }}"></script>
+        <script  src="{{ asset('assets/frontend/js/general.js') }}"></script>
+        {# {{ encore_entry_script_tags('app') }} #}
+
+        <script>
+            //MUESTRA LOADING ANTES DE CARGAR LA NUEVA PAGINA
+            $(window).on('beforeunload', function(){
+                loadingPageShow();
+            });
+            //OCULTA LOADING AL TERMINAR DE CARGAR LA PAGINA.
+            document.addEventListener('DOMContentLoaded', function() {
+                loadingPageHidden();
+            });
+        </script>
+    {% endblock %}
+</head>
+
+<body>
+
+{% block body %}
+
+       {% block head %}{% endblock %}
+
+        {% block menu %}
+        {% include "frontend/_component/menu/_navbar.html.twig" %}
+        {% endblock %}{# endMenu #}
+
+        {% block containerBase %}
+            <div class="container-fluid base-cont">
+                <div class="row">
+                    <div class="col-12">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        {% endblock %}{# endContainerBase #}
+
+        {% block footer %}
+            {% include "frontend/_component/footer/_footer.html.twig" %}
+        {% endblock %}
+        {% block javascript_footer %}
+        {% endblock %}{# endJavascriptFooter #}
+
+{% endblock %} {# endBody #}
+</body>
+
+</html>

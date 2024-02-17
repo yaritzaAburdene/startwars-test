@@ -1,0 +1,69 @@
+/**************
+	Generales
+****************/
+* {
+  color: #ffffff;
+}
+
+body {
+  overflow-x: hidden !important;
+  background-color: #000000 !important;
+  min-width: 100vw !important;
+  height: 100vh;
+  margin: 0 !important;
+}
+
+body *::-moz-selection {
+  color: #020207;
+  background-color: #b62fff;
+}
+
+body *::selection {
+  color: #020207;
+  background-color: #b62fff;
+}
+
+button {
+  color: #ffffff !important;
+}
+.hidden {
+  display: none;
+}
+
+/*-------
+	botones bootstrap 
+-----------*/
+.btn-success {
+  background-color: #00ff85 !important;
+  color: #000000 !important;
+}
+
+.btn-danger {
+  background-color: #ff0534 !important;
+}
+
+a:hover {
+  transition: all 1s ease;
+}
+
+
+/** footer **/
+footer {
+  /*Esto causaba errores*/
+  /* position: absolute !important;
+  bottom: 0; */
+  margin-top: 10px !important;
+  width: 100vw;
+  align-items: center;
+  padding: 10px;
+}
+
+/**links del footer**/
+footer div div div a {
+  text-decoration: none !important;
+  color: #d5c706 !important;
+}
+
+footer div div div a:hover {
+  color: #c5bf69 !important;
+}

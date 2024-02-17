@@ -1,0 +1,239 @@
+/* Main logo & title */
+.main-title-logo-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80vh;
+  -webkit-animation: slidein 3s forwards cubic-bezier(0.45, 0, 0.55, 1);
+          animation: slidein 3s forwards cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.main-title {
+  text-align: center;
+  width: 100%;
+  font-size: 3.5em;
+  transition: color 1s;
+}
+
+.main-title:hover {
+  color: #b62fff;
+}
+
+.img-home {
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Navbar */
+.nav1-main-container {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+}
+
+.nav1-item {
+  list-style-type: none;
+}
+
+.nav1-link {
+  font-size: 1.3em;
+  color: transparent;
+  -webkit-animation: apear 2s 2s forwards ease;
+          animation: apear 2s 2s forwards ease;
+}
+
+.other-nav {
+  margin: 10px 0 0 0;
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+}
+
+.nav1-link:hover {
+  background-color: #ffffff;
+  color: #020207 !important;
+  font-size: 1.5em;
+  color: white;
+}
+
+.nav1-item {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 5px;
+}
+
+/*Ocultar mostrar navbar1 */
+.toggler {
+  display: none;
+}
+
+.tgl-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.toggle-icon {
+  width: 60px;
+  height: 60px;
+  color: #b62fff !important;
+  -webkit-animation: slidein 3s forwards cubic-bezier(0.45, 0, 0.55, 1);
+          animation: slidein 3s forwards cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/* Class para hacer el toggle */
+.active {
+  display: block;
+}
+
+/* Rotacion on hover logo */
+.rotate-center:hover {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+/*  Detecta cuando un CELULAR  si esta en modo landscape  */
+@-webkit-keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes apear {
+  from {
+    color: transparent;
+  }
+  to {
+    color: white;
+  }
+}
+@keyframes apear {
+  from {
+    color: transparent;
+  }
+  to {
+    color: white;
+  }
+}
+@-webkit-keyframes slidein {
+  0% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: 35%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+@keyframes slidein {
+  0% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: 35%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+@media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  .main-title {
+    font-size: 1.5em;
+  }
+  .main-title-logo-container,
+.main-title {
+    margin: 0;
+    padding: 0;
+  }
+  .toggle-icon {
+    max-width: 20%;
+    max-height: 20%;
+  }
+}
+@media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) and (max-width: 569px) {
+  .nav1-container {
+    display: flex;
+    margin: 0;
+  }
+  .toggler {
+    display: none;
+  }
+  .main-title {
+    font-size: 1.5em;
+  }
+  .main-title-logo-container,
+.main-title,
+.img-home {
+    margin: 0;
+    padding: 0;
+  }
+  .toggle-icon {
+    max-width: 20%;
+    max-height: 20%;
+  }
+}
+/* --------------------
+ Responsive 
+ ----------------------*/
+@media (max-width: 640px) {
+  .main-title {
+    font-size: 3em;
+  }
+}
+@media (max-width: 625px) {
+  .img-home {
+    width: 300px;
+    height: 50%;
+    margin: 50px 0 !important;
+    text-align: center;
+    padding: 10px;
+  }
+  .nav1-item {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 2.5em;
+  }
+  .img-home {
+    width: 250px;
+    height: 50%;
+    margin: 50px 0 !important;
+    text-align: center;
+    padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .nav1-container {
+    display: none;
+  }
+  .toggler {
+    display: block;
+  }
+  .main-title {
+    padding: 0 5% 0 5%;
+  }
+}

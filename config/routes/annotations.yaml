@@ -1,0 +1,11 @@
+controllers_backend:
+    resource: ../../src/BackendController/
+    type: annotation
+
+controllers_frontend:
+    resource: ../../src/FrontendController/
+    type: annotation
+
+kernel:
+    resource: ../../src/Kernel.php
+    type: annotation

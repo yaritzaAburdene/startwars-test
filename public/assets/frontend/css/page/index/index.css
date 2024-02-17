@@ -1,0 +1,49 @@
+body {
+  overflow: hidden;
+}
+
+.neon {
+  animation: neonAnim 2.5s alternate-reverse infinite;
+  color: #B62FFF;
+}
+
+@-webkit-keyframes neonAnim {
+  from {
+    text-shadow: 0 0 10px rgba(182, 47, 255, 0.7), 0 0 40px rgba(182, 47, 255, 0.7), 0 0 100px rgba(182, 47, 255, 0.7);
+  }
+  to {
+    text-shadow: 0 0 5px rgba(182, 47, 255, 0.7), 0 0 20px rgba(182, 47, 255, 0.7), 0 0 60px rgba(182, 47, 255, 0.7);
+  }
+}
+
+@keyframes neonAnim {
+  from {
+    text-shadow: 0 0 10px rgba(182, 47, 255, 0.7), 0 0 40px rgba(182, 47, 255, 0.7), 0 0 100px rgba(182, 47, 255, 0.7);
+  }
+  to {
+    text-shadow: 0 0 5px rgba(182, 47, 255, 0.7), 0 0 20px rgba(182, 47, 255, 0.7), 0 0 60px rgba(182, 47, 255, 0.7);
+  }
+}
+.neon-w {
+  animation: neonAnim-w 2s alternate-reverse infinite;
+  color: #FFFFFF;
+  font-family: Bahnschrift;
+}
+
+@-webkit-keyframes neonAnim-w {
+  from {
+    text-shadow: 0 0 1px rgba(127, 127, 127, 0.7), 0 0 5px rgba(127, 127, 127, 0.7), 0 0 10px rgba(127, 127, 127, 0.7);
+  }
+  to {
+    text-shadow: 0 0 0.5px rgba(127, 127, 127, 0.7), 0 0 2.5px rgba(127, 127, 127, 0.7), 0 0 5px rgba(127, 127, 127, 0.7);
+  }
+}
+
+@keyframes neonAnim-w {
+  from {
+    text-shadow: 0 0 1px rgba(127, 127, 127, 0.7), 0 0 5px rgba(127, 127, 127, 0.7), 0 0 10px rgba(127, 127, 127, 0.7);
+  }
+  to {
+    text-shadow: 0 0 0.5px rgba(127, 127, 127, 0.7), 0 0 2.5px rgba(127, 127, 127, 0.7), 0 0 5px rgba(127, 127, 127, 0.7);
+  }
+}

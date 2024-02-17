@@ -1,0 +1,9 @@
+/***********************************
+   MODIFICAR COLORES DE LA TEMPLATE
+ ***********************************/
+
+/* MENU */
+.sidebar-nav ul .sidebar-item.selected>.sidebar-link
+{
+    background:#ae2ff5 !important;
+}

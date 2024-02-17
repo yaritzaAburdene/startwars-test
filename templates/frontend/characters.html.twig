@@ -1,0 +1,43 @@
+{% extends 'frontend/base.html.twig' %}
+{% block title %}Characters{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{asset('assets/frontend/css/page/characters/characters.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Characters</h1>
+        {# search #}
+        <form class="search-menu">
+            <div class="input-group mb-3 row">
+                <div class="input-group">
+                    <input placeholder="Search" type="text" class="form-control" aria-label="Search caracter">
+                    <button class="btn btn-dark text-light" type="button" id="button-addon1">Search 🔎</button>
+                </div>
+            </div>
+        </form>
+        {# Character container #}
+        <main class="data-menu d-flex mb-5">
+            {% for i in 0..10 %}
+                <div class="character-container card-body mb-4 ">
+                    <div class="hovereffect">
+                        <img class="img-responsive character-img" src="{{asset('assets/frontend/img/characters/baby_yoda.png') }}" alt="">
+                        <div class="overlay">
+                            <div class="overlay-title">
+                                <h2>Baby Yoda</h2>
+                            </div>
+                            <a class="info" href="#">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </main>
+        {# end character container #}
+    </div>
+
+{% endblock %}
+
+{% block javascript_footer %}
+    <script src="{{ asset('assets/frontend/js/bootstrap/popper.min.js') }}"></script>
+{% endblock %}
